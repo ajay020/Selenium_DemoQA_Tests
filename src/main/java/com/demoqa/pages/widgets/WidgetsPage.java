@@ -2,14 +2,21 @@ package com.demoqa.pages.widgets;
 
 import com.demoqa.pages.HomePage;
 import org.openqa.selenium.By;
-import utilities.JavaScriptUtility;
+import static utilities.JavaScriptUtility.scrollToElementJS;
 
 public class WidgetsPage extends HomePage {
     private By selectMenuItem = By.xpath("//li[@id='item-8']//span[text()='Select Menu']");
+    private By datePickerMenuItem = By.xpath("//li[@id='item-2']//span[text()='Date Picker']");
 
     public SelectMenuPage clickSelectMenu( ) {
-        JavaScriptUtility.scrollToElementJS(selectMenuItem);
+        scrollToElementJS(selectMenuItem);
         click(selectMenuItem);
         return new SelectMenuPage();
+    }
+
+    public DatePickerMenuPage clickDatePickerMenu() {
+        scrollToElementJS(datePickerMenuItem);
+        click(datePickerMenuItem);
+        return new DatePickerMenuPage();
     }
 }
