@@ -1,6 +1,7 @@
 package com.demoqa.pages.forms;
 
 import org.openqa.selenium.By;
+import utilities.JavaScriptUtility;
 
 import static utilities.JavaScriptUtility.clickJS;
 import static utilities.JavaScriptUtility.scrollToElementJS;
@@ -10,6 +11,7 @@ public class PracticeFormPage extends FormsPage{
     private By sportsHobbyCheckBox = By.id("hobbies-checkbox-1");
     private By readingHobbyCheckBox = By.id("hobbies-checkbox-2");
     private By musicHobbyCheckBox = By.id("hobbies-checkbox-3");
+    private By submitButton = By.id("submit");
 
 
     public void clickFemaleRadioButton() {
@@ -59,5 +61,10 @@ public class PracticeFormPage extends FormsPage{
 
     public boolean isSportSelected() {
         return find(sportsHobbyCheckBox).isSelected();
+    }
+
+    public void clickSubmitButton() {
+//        JavaScriptUtility.scrollToElementJS(submitButton);
+        click(submitButton);
     }
 }
