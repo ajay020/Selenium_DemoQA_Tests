@@ -17,6 +17,5 @@ public class WindowsTest extends BaseTest {
        String expectedUrl = "https://demoqa.com/sample";
 
         Assert.assertEquals(actualUrl, expectedUrl, "\n Actual & Expected URL don't match. \n");
-
     }
 }
