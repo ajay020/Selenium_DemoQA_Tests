@@ -3,6 +3,7 @@ package com.demoqa.pages.alerts_frame_windows;
 import org.openqa.selenium.By;
 
 import static utilities.SwitchToUtility.*;
+import static utilities.WaitUtility.explicitWaitUntilVisible;
 
 public class FramePage extends Alerts_Frame_WindowPage {
     private By textInFrame = By.id("sampleHeading");
@@ -20,12 +21,16 @@ public class FramePage extends Alerts_Frame_WindowPage {
     }
 
     private void switchToSmallBox() {
-//        switchToFrameIndex(1);
         switchToFrameElement(find(iframeSmallBox));
     }
 
     public String getTextInBigFrame () {
         switchToBigBox();
+
+        // Wait for element inside iframe to be present
+       explicitWaitUntilVisible (5, textInFrame);
+
+
         String bigFrameText = find(textInFrame).getText();
         System.out.println("Big Frame Text : " + bigFrameText);
 
@@ -36,6 +41,10 @@ public class FramePage extends Alerts_Frame_WindowPage {
 
     public String getTextInSmallFrame() {
         switchToSmallBox();
+
+        // Wait for element inside iframe to be present
+        explicitWaitUntilVisible (5, textInFrame);
+
 
         String smallFrameText = find(textInFrame).getText();
         System.out.println("Small Frame Text : " + smallFrameText);

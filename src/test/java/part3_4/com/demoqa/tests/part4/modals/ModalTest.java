@@ -11,7 +11,9 @@ public class ModalTest extends BaseTest {
         var afwPage = homePage.goToAlertFrameWindowCard();
         var modalDialogsPage = afwPage.clickModalDialogMenuItem();
         modalDialogsPage.clickSmallDialogButon();
+
         String actualText = modalDialogsPage.getSmallDialogText();
+
         Assert.assertTrue(actualText.contains("small modal"), "\n The message doesn't contain 'small modal' \n");
         modalDialogsPage.clickCloseButton();
     }

@@ -30,7 +30,7 @@ public class TextBoxPage extends ElementsPage{
 
     public void setFullName (String name) {
         scrollToElementJS(fullNameField);
-        sendKeys(find(fullNameField), Keys.chord(name));
+        sendKeys(find(fullNameField), Keys.chord(name, Keys.TAB));
     }
 
     public void setEmail (String email) {

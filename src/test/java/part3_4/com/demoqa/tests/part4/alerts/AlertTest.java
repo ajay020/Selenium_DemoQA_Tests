@@ -46,6 +46,10 @@ public class AlertTest extends BaseTest {
         acceptAlert();
 
         String actualResult = alertPage.getPromptAlertResult();
-        Assert.assertEquals(actualResult, expectedResult,  "\n Actual & Expected Result Do No Match.\n");
+        Assert.assertEquals(
+                actualResult,
+                expectedResult,
+                "\n Actual & Expected Result Do No Match.\n"
+        );
     }
 }

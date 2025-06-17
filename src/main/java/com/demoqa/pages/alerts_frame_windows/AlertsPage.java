@@ -3,6 +3,8 @@ package com.demoqa.pages.alerts_frame_windows;
 import org.openqa.selenium.By;
 import utilities.JavaScriptUtility;
 
+import static utilities.JavaScriptUtility.clickJS;
+
 public class AlertsPage extends Alerts_Frame_WindowPage{
     private By informationAlertButton = By.id("alertButton");
     private By confirmationAlertButton = By.id("confirmButton");
@@ -16,7 +18,7 @@ public class AlertsPage extends Alerts_Frame_WindowPage{
     }
 
     public void clickConfirmationAlertButton() {
-        click(confirmationAlertButton);
+        clickJS(confirmationAlertButton);
     }
 
     public String getConfirmationAlertText () {
@@ -24,7 +26,7 @@ public class AlertsPage extends Alerts_Frame_WindowPage{
     }
 
     public void clickPromptAlertButton() {
-        click(promptAlertButton);
+        clickJS(promptAlertButton);
     }
 
     public String getPromptAlertResult () {

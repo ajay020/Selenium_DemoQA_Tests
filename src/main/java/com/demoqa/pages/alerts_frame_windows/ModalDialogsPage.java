@@ -2,6 +2,8 @@ package com.demoqa.pages.alerts_frame_windows;
 
 import org.openqa.selenium.By;
 
+import static utilities.WaitUtility.explicitWaitUntilVisible;
+
 public class ModalDialogsPage extends Alerts_Frame_WindowPage{
     private By smallDialogButton = By.id("showSmallModal");
     private By smallDialogText = By.xpath("//div[contains(text(), 'small modal')]");
@@ -12,6 +14,7 @@ public class ModalDialogsPage extends Alerts_Frame_WindowPage{
     }
 
     public String getSmallDialogText () {
+        explicitWaitUntilVisible(5, smallDialogText);
         return find(smallDialogText).getText();
     }
 
