@@ -33,6 +33,8 @@ public class BaseTest {
 
     @BeforeMethod
     public void loadApplication() {
+        delay(1000);
+        System.out.println("Loading URL: " + DEMOQA_URL);
         driver.get(DEMOQA_URL);
         basePage = new BasePage();
         basePage.setDriver(driver);

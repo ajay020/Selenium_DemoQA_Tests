@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="AllTestsSuite">
+    <test name="AllTests">
+        <packages>
+            <package name="part3_4.com.demoqa.tests.part3.elements"/>
+            <package name="part3_4.com.demoqa.tests.part3.forms"/>
+            <package name="part3_4.com.demoqa.tests.part3.widgets"/>
+            <package name="part3_4.com.demoqa.tests.part4.alerts"/>
+            <package name="part3_4.com.demoqa.tests.part4.frames"/>
+            <package name="part3_4.com.demoqa.tests.part4.modals"/>
+        </packages>
+    </test>
+</suite>
